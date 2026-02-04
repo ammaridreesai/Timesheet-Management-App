@@ -42,16 +42,7 @@ function getActionLabel(status: string): string {
 }
 
 function getActionColor(status: string): string {
-  switch (status) {
-    case "completed":
-      return "text-[#3B5BDB]";
-    case "incomplete":
-      return "text-[#3B5BDB]";
-    case "missing":
-      return "text-[#3B5BDB]";
-    default:
-      return "text-[#3B5BDB]";
-  }
+  return "text-blue-600";
 }
 
 export default function TimesheetsTable({
@@ -77,45 +68,45 @@ export default function TimesheetsTable({
       <table className="w-full">
         <thead>
           <tr className="border-b border-gray-200">
-            <th className="text-left py-3 px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="text-left py-4 px-6 text-xs font-medium text-gray-500 uppercase tracking-wider">
               <div className="flex items-center">
                 Week #
                 {renderSortIcon("weekNumber")}
               </div>
             </th>
-            <th className="text-left py-3 px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="text-left py-4 px-6 text-xs font-medium text-gray-500 uppercase tracking-wider">
               <div className="flex items-center">
                 Date
                 {renderSortIcon("date")}
               </div>
             </th>
-            <th className="text-left py-3 px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="text-left py-4 px-6 text-xs font-medium text-gray-500 uppercase tracking-wider">
               <div className="flex items-center">
                 Status
                 {renderSortIcon("status")}
               </div>
             </th>
-            <th className="text-right py-3 px-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="text-right py-4 px-6 text-xs font-medium text-gray-500 uppercase tracking-wider">
               Actions
             </th>
           </tr>
         </thead>
         <tbody>
-          {timesheets.map((timesheet) => (
+          {timesheets.map((timesheet, index) => (
             <tr
               key={timesheet.id}
-              className="border-b border-gray-100 hover:bg-gray-50"
+              className={`hover:bg-gray-50 ${index < timesheets.length - 1 ? "border-b border-gray-100" : ""}`}
             >
-              <td className="py-4 px-4 text-sm text-gray-900">
+              <td className="py-5 px-6 text-sm text-gray-900 font-medium">
                 {timesheet.weekNumber}
               </td>
-              <td className="py-4 px-4 text-sm text-gray-600">
+              <td className="py-5 px-6 text-sm text-blue-600">
                 {formatDateRange(timesheet.startDate, timesheet.endDate)}
               </td>
-              <td className="py-4 px-4">
+              <td className="py-5 px-6">
                 <StatusBadge status={timesheet.status} />
               </td>
-              <td className="py-4 px-4 text-right">
+              <td className="py-5 px-6 text-right">
                 <Link
                   href={`/dashboard/timesheet/${timesheet.id}`}
                   className={`text-sm font-medium hover:underline ${getActionColor(

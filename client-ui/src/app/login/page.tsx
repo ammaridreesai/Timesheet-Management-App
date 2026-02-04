@@ -85,7 +85,7 @@ export default function LoginPage() {
                 type="email"
                 id="email"
                 placeholder="name@example.com"
-                className="w-full px-4 py-3 text-sm bg-white border border-gray-200 rounded-lg outline-none focus:border-[#3B5BDB] focus:ring-1 focus:ring-[#3B5BDB] transition-colors"
+                className="w-full px-4 py-3 text-sm bg-white border border-gray-200 rounded-lg outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-colors"
               />
               {errors.email && (
                 <p className="mt-1 text-sm text-red-600">
@@ -106,7 +106,7 @@ export default function LoginPage() {
                 type="password"
                 id="password"
                 placeholder="••••••••••"
-                className="w-full px-4 py-3 text-sm bg-white border border-gray-200 rounded-lg outline-none focus:border-[#3B5BDB] focus:ring-1 focus:ring-[#3B5BDB] transition-colors"
+                className="w-full px-4 py-3 text-sm bg-white border border-gray-200 rounded-lg outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-colors"
               />
               {errors.password && (
                 <p className="mt-1 text-sm text-red-600">
@@ -120,7 +120,7 @@ export default function LoginPage() {
                 {...register("rememberMe")}
                 type="checkbox"
                 id="rememberMe"
-                className="w-4 h-4 border border-gray-200 rounded accent-[#3B5BDB]"
+                className="w-4 h-4 border border-gray-200 rounded accent-blue-600"
               />
               <label
                 htmlFor="rememberMe"
@@ -133,7 +133,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-3.5 px-4 bg-[#3B5BDB] text-white font-medium rounded-lg hover:bg-[#2f4bb8] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3.5 px-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? "Signing in..." : "Sign in"}
             </button>
@@ -142,7 +142,7 @@ export default function LoginPage() {
       </div>
 
       {/* Right side - Branding */}
-      <div className="hidden md:flex w-1/2 bg-[#3B5BDB] items-center justify-center p-12">
+      <div className="hidden md:flex w-1/2 bg-blue-600 items-center justify-center p-12">
         <div className="text-white max-w-md">
           <h2 className="text-4xl font-bold italic mb-6">ticktock</h2>
           <p className="text-lg leading-relaxed opacity-90">

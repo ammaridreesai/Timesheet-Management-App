@@ -65,7 +65,7 @@ export default function Pagination({
           disabled={page === "..."}
           className={`min-w-[32px] h-8 text-sm rounded ${
             page === currentPage
-              ? "bg-[#3B5BDB] text-white"
+              ? "bg-blue-600 text-white"
               : page === "..."
               ? "text-gray-400 cursor-default"
               : "text-gray-600 hover:bg-gray-100"

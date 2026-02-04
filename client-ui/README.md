@@ -15,7 +15,7 @@ A modern, responsive timesheet management application built with Next.js 16, Typ
 
 - **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
-- **Styling**: TailwindCSS 4
+- **Styling**: TailwindCSS 3.4
 - **Authentication**: NextAuth.js v5 (beta)
 - **Form Handling**: React Hook Form + Zod validation
 - **Icons**: Lucide React
@@ -149,6 +149,19 @@ All API routes are internal (client-side calls go through Next.js API routes):
 - Add team/manager views
 - Implement notifications for incomplete timesheets
 - Add dark mode support
+
+## Time Spent
+
+| Task | Duration |
+|------|----------|
+| Project setup & configuration | 1 hour |
+| Authentication (NextAuth) | 1.5 hours |
+| Dashboard page & timesheets table | 2 hours |
+| Timesheet detail page with entries | 2 hours |
+| UI components & styling | 2 hours |
+| Testing setup & tests | 1 hour |
+| Bug fixes & refinements | 1.5 hours |
+| **Total** | **~11 hours** |
 
 ## License
 

@@ -1,63 +1,7 @@
-@import "tailwindcss";
-
-@theme inline {
-  --color-primary: #3B5BDB;
-  --color-primary-dark: #2f4bb8;
-  --color-background: #ffffff;
-  --color-foreground: #1a1a2e;
-  --color-muted: #6b7280;
-  --color-border: #e5e7eb;
-  --color-success: #22c55e;
-  --color-warning: #eab308;
-  --color-danger: #ef4444;
-  --font-sans: "Inter", sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  background: var(--color-background);
-  color: var(--color-foreground);
-  font-family: var(--font-sans);
-}
-
-/* Form element resets for Tailwind v4 */
-input,
-textarea,
-select {
-  border-style: solid;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-textarea {
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-input[type="checkbox"] {
-  appearance: auto;
-  -webkit-appearance: checkbox;
-}
-
-/* Status badge styles */
-.status-completed {
-  background-color: #dcfce7;
-  color: #16a34a;
-}
-
-.status-incomplete {
-  background-color: #fef9c3;
-  color: #ca8a04;
-}
-
-.status-missing {
-  background-color: #fee2e2;
-  color: #dc2626;
+  @apply bg-white text-gray-900;
 }
